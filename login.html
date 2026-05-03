@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <style>
+        body { font-family: Arial; background: #f5f5f5; }
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        .error { color: red; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Đăng nhập</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <div class="error" id="errEmail"></div>
+
+    <input type="password" id="password" placeholder="Mật khẩu">
+    <div class="error" id="errPass"></div>
+
+    <button onclick="login()">Đăng nhập</button>
+</div>
+
+<script>
+function login() {
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = users.find(u => u.email === email && u.password === password);
+
+    if (!user) {
+        document.getElementById("errPass").innerText = "Sai email hoặc mật khẩu";
+        return;
+    }
+
+    // lưu trạng thái đăng nhập
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    alert("Đăng nhập thành công!");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
