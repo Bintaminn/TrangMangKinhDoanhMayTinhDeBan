@@ -43,3 +43,35 @@ feat: add login page
 fix: repair cart total price
 docs: update project report
 style: update responsive homepage
+
+## Quy tắc Pull Request
+
+Khi hoàn thành một phần việc, thành viên không được merge trực tiếp vào `main`.  
+Mỗi thành viên cần tạo Pull Request từ branch cá nhân vào branch `main`.
+
+### Yêu cầu trước khi tạo Pull Request
+
+- Code đúng phần việc được phân công.
+- Không làm hỏng giao diện hoặc chức năng của người khác.
+- Đã tự kiểm tra trang mình làm.
+- Không có lỗi JavaScript trong Console.
+- Link điều hướng hoạt động đúng.
+- Giao diện hiển thị tốt trên desktop và mobile.
+- Nếu có chỉnh file dùng chung như `style.css`, `data.js`, `ui.js` thì phải báo nhóm.
+
+### Nội dung Pull Request cần có
+
+Mỗi Pull Request cần ghi rõ:
+
+- Đã làm chức năng gì.
+- Đã sửa những file nào.
+- Cách kiểm tra.
+- Còn lỗi hoặc phần chưa hoàn thiện không.
+- Ảnh chụp màn hình nếu có giao diện.
+
+### Quy tắc merge
+
+- Không tự merge Pull Request của mình nếu chưa được kiểm tra.
+- Ít nhất một thành viên khác hoặc nhóm trưởng phải xem lại.
+- Nếu có góp ý thì phải sửa trước khi merge.
+- Sau khi merge xong, cập nhật trạng thái task trong Project Board.
