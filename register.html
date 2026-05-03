@@ -3,20 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Đăng ký</title>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/auth.js"></script>
     <style>
-        body { font-family: Arial; background: #f5f5f5; }
-        .container {
-            width: 400px;
-            margin: 50px auto;
-            background:white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        input, button {
-            width: 100%;
-          
-            margin: 8px 0;
-        }
+        .container { width: 350px; margin: auto; }
         .error { color: red; font-size: 13px; }
     </style>
 </head>
@@ -25,78 +16,20 @@
 <div class="container">
     <h2>Đăng ký</h2>
 
-    <input type="text" id="name" placeholder="Họ tên">
-    <div class="error" id="errName"></div>
+    <input id="name" placeholder="Họ tên">
+    <div id="errName" class="error"></div>
 
-    <input type="email" id="email" placeholder="Email">
-    <div class="error" id="errEmail"></div>
+    <input id="email" placeholder="Email">
+    <div id="errEmail" class="error"></div>
 
     <input type="password" id="password" placeholder="Mật khẩu">
-    <div class="error" id="errPass"></div>
+    <div id="errPass" class="error"></div>
 
     <input type="password" id="confirm" placeholder="Nhập lại mật khẩu">
-    <div class="error" id="errConfirm"></div>
+    <div id="errConfirm" class="error"></div>
 
     <button onclick="register()">Đăng ký</button>
 </div>
-
-<script>
-function register() {
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value;
-    let confirm = document.getElementById("confirm").value;
-
-    let isValid = true;
-
-    // reset lỗi
-    document.getElementById("errName").innerText = "";
-    document.getElementById("errEmail").innerText = "";
-    document.getElementById("errPass").innerText = "";
-    document.getElementById("errConfirm").innerText = "";
-
-    // validate
-    if (name === "") {
-        document.getElementById("errName").innerText = "Vui lòng nhập tên";
-        isValid = false;
-    }
-
-    if (!email.includes("@")) {
-        document.getElementById("errEmail").innerText = "Email không hợp lệ";
-        isValid = false;
-    }
-
-    if (password.length < 6) {
-        document.getElementById("errPass").innerText = "Mật khẩu >= 6 ký tự";
-        isValid = false;
-    }
-
-    if (password !== confirm) {
-        document.getElementById("errConfirm").innerText = "Mật khẩu không khớp";
-        isValid = false;
-    }
-
-    if (!isValid) return;
-
-    // lưu user vào LocalStorage
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // kiểm tra email tồn tại
-    let exists = users.find(u => u.email === email);
-    if (exists) {
-        alert("Email đã tồn tại!");
-        return;
-    }
-
-    let user = { name, email, password };
-    users.push(user);
-
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Đăng ký thành công!");
-    window.location.href = "login.html";
-}
-</script>
 
 </body>
 </html>
