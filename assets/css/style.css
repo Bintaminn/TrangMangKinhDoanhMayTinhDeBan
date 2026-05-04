@@ -1,1 +1,115 @@
+/* --- BIẾN DÙNG CHUNG --- */
+:root {
+    --primary: #00f2ea;
+    --bg-dark: #070707;
+    --bg-card: #111111;
+}
 
+body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.bg-black { background-color: #030303 !important; }
+.text-cyan { color: var(--primary) !important; }
+.italic { font-style: italic; }
+.bg-cyan { background-color: var(--primary); }
+.letter-spacing-1 { letter-spacing: 2px; }
+.hover-cyan:hover { color: var(--primary) !important; }
+
+/* --- BUTTONS --- */
+.btn-cyan { background-color: var(--primary); color: #000; border: none; }
+.btn-cyan:hover { background-color: #00ccc6; color: #000; }
+.btn-outline-cyan { border: 1px solid var(--primary); color: var(--primary); background: transparent; }
+.btn-outline-cyan:hover { background-color: var(--primary); color: #000; }
+
+/* --- NAVBAR --- */
+.navbar { background: rgba(5, 5, 5, 0.95); border-bottom: 1px solid #222; padding: 15px 0; }
+.navbar-nav .nav-link { color: #ccc !important; font-weight: 500; font-size: 0.85rem; margin: 0 10px; text-transform: uppercase; }
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover { color: var(--primary) !important; }
+.nav-icons a { font-size: 1.1rem; text-decoration: none; }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    padding-top: 60px;
+    background: radial-gradient(circle at right, #00f2ea1a 0%, var(--bg-dark) 50%);
+}
+@media (min-width: 992px) {
+    .hero-image { max-width: 90%; float: right; filter: drop-shadow(0 0 40px rgba(0, 242, 234, 0.15)); }
+}
+
+/* --- SUB-MENU BAR --- */
+.sub-menu-bar { background: #0f0f0f; border-bottom: 1px solid #222; }
+.sub-menu-item {
+    color: #888; text-decoration: none; font-size: 0.9rem; padding: 10px 15px;
+    border-radius: 6px; transition: 0.3s; font-weight: 500;
+}
+.sub-menu-item:hover { color: var(--primary); background: rgba(0, 242, 234, 0.05); }
+
+/* --- CATEGORY CARDS (Bố cục mới) --- */
+.cat-card {
+    background: var(--bg-card); border: 1px solid #222; padding: 20px;
+    border-radius: 8px; text-decoration: none; transition: 0.3s;
+}
+.cat-card img { transition: 0.4s; }
+.cat-card:hover, .cat-card.active { border-color: var(--primary); background: #141414; }
+.cat-card:hover img { transform: scale(1.05); }
+
+/* --- PRODUCT CARDS --- */
+.product-card {
+    background: var(--bg-card); border: 1px solid #222; padding: 20px;
+    border-radius: 10px; transition: 0.3s; position: relative; height: 100%;
+}
+.product-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.product-card img { object-fit: contain; max-height: 200px; width: 100%; margin: 0 auto; display: block; }
+
+/* --- PROMO BANNER --- */
+.promo-banner {
+    background: linear-gradient(45deg, #111 0%, #003331 100%);
+    border: 1px solid #00f2ea4d;
+}
+.promo-list span { font-weight: bold; font-size: 0.9rem; }
+
+/* --- FEATURE ICONS --- */
+.feature-icon { font-size: 2.5rem; color: var(--primary); }
+
+/* --- NEWS CARDS --- */
+.news-card {
+    background: transparent; transition: 0.3s; cursor: pointer;
+}
+.news-card img { transition: 0.4s; border: 1px solid #333; }
+.news-card:hover img { border-color: var(--primary); }
+
+/* --- FOOTER SOCIAL --- */
+.footer-social { text-decoration: none; text-align: center; display: inline-block; transition: 0.3s; }
+.footer-social:hover .social-icon { background-color: var(--primary); color: #000 !important; }
+.footer-social:hover small { color: var(--primary); }
+
+/* --- Bổ sung để source BTWed chạy đúng trong cấu trúc TrangMangKinhDoanhMayTinhDeBan --- */
+a { transition: .25s ease; }
+.page-hero { padding: 70px 0 40px; background: radial-gradient(circle at right, rgba(0,242,234,.12) 0%, var(--bg-dark) 55%); border-bottom: 1px solid #222; }
+.page-title { font-weight: 800; letter-spacing: .5px; }
+.breadcrumb-lite { color: #7d8589; font-size: .9rem; }
+.breadcrumb-lite a { color: var(--primary); text-decoration: none; }
+.content-card { background: var(--bg-card); border: 1px solid #222; border-radius: 12px; padding: 24px; height: 100%; }
+.product-link { text-decoration: none; color: inherit; display: block; }
+.product-card .btn { position: relative; z-index: 2; }
+.product-card .price { color: var(--primary); font-weight: 800; }
+.filter-box, .cart-line, .checkout-box { background: #0f0f0f; border: 1px solid #222; border-radius: 12px; padding: 18px; }
+.form-dark .form-control, .form-dark .form-select { background: #111; color: #fff; border-color: #333; }
+.form-dark .form-control:focus, .form-dark .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 .15rem rgba(0,242,234,.15); }
+.auth-wrapper { min-height: 100vh; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); display: flex; align-items: center; justify-content: center; padding: 30px 15px; }
+.auth-card { width: min(420px, 100%); background: rgba(0,0,0,.72); border: 1px solid rgba(0,242,234,.25); border-radius: 16px; box-shadow: 0 0 22px rgba(0,255,200,.24); padding: 30px; }
+.auth-card input { width: 100%; padding: 12px; margin: 10px 0 4px; border: 1px solid #222; border-radius: 8px; background: #111; color: #fff; }
+.auth-card input:focus { outline: none; border-color: var(--primary); }
+.error { min-height: 18px; color: #ff6666; font-size: 13px; }
+.site-map-node { border: 1px solid #263236; border-radius: 10px; padding: 14px 18px; background: #111; color: #fff; text-decoration: none; display: block; }
+.site-map-node:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-2px); }
+.news-card a.stretched-link::after, .product-card a.stretched-link::after { position: static; }
+.qty-control { width: 92px; }
+.table-dark-custom { --bs-table-bg: #0e0e0e; --bs-table-color: #fff; --bs-table-border-color: #222; }
+.badge-soft { background: rgba(0,242,234,.1); color: var(--primary); border: 1px solid rgba(0,242,234,.25); }
+#cartCount { min-width: 22px; display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 576px) { .display-4 { font-size: 2.1rem; } .join-community { align-items: stretch !important; } .join-community .d-flex { width: 100%; flex-direction: column; } }

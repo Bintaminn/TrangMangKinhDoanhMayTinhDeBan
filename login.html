@@ -2,98 +2,23 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Đăng nhập</title>
-
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/storage.js"></script>
-<script src="../assets/js/auth.js"></script>
-
-<style>
-
-body{
-    height:100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:'Segoe UI';
-}
-
-.container{
-    width:350px;
-    padding:30px;
-    background: rgba(0,0,0,0.7);
-    border-radius:15px;
-    backdrop-filter: blur(10px);
-    box-shadow:0 0 20px rgba(0,255,200,0.3);
-}
-
-h2{
-    text-align:center;
-    color:white;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
-    background:#111;
-    color:white;
-}
-
-input:focus{
-    outline:none;
-    border:1px solid #00ffd5;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    margin-top:15px;
-    border:none;
-    border-radius:8px;
-    background: linear-gradient(90deg,#00ffd5,#00bfa6);
-    color:black;
-    font-weight:bold;
-}
-
-.error{
-    color:#ff4d4d;
-    font-size:13px;
-}
-
-.link{
-    text-align:center;
-    margin-top:10px;
-    color:white;
-}
-
-.link a{
-    color:#00ffd5;
-    text-decoration:none;
-}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng nhập | BINTAMIN PC</title>
+<link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-
-<div class="container">
-    <h2>Đăng nhập</h2>
-
-    <input id="email" placeholder="Email">
-    <div id="errEmail" class="error"></div>
-
-    <input type="password" id="password" placeholder="Mật khẩu">
-    <div id="errPass" class="error"></div>
-
-    <button onclick="login()">Đăng nhập</button>
-
-    <div class="link">
-        Chưa có tài khoản? <a href="register.html">Đăng ký</a>
-    </div>
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <a class="text-cyan text-decoration-none small" href="index.html">← Về trang chủ</a>
+    <h2 class="text-center text-white fw-bold my-3">Đăng nhập</h2>
+    <input id="email" placeholder="Email"><div id="errEmail" class="error"></div><input type="password" id="password" placeholder="Mật khẩu"><div id="errPass" class="error"></div>
+    <button class="btn btn-cyan text-dark fw-bold w-100 mt-3" onclick="login()">Đăng nhập</button>
+    <div class="text-center mt-3"><a class="text-cyan text-decoration-none" href="register.html">Chưa có tài khoản? Đăng ký</a></div>
+  </div>
 </div>
-
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/auth.js"></script>
 </body>
 </html>

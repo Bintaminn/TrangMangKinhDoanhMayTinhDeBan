@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký | BINTAMIN PC</title>
+<link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <a class="text-cyan text-decoration-none small" href="../index.html">← Về trang chủ</a>
+    <h2 class="text-center text-white fw-bold my-3">Đăng ký</h2>
+    <input id="name" placeholder="Họ tên"><div id="errName" class="error"></div><input id="email" placeholder="Email"><div id="errEmail" class="error"></div><input type="password" id="password" placeholder="Mật khẩu"><div id="errPass" class="error"></div><input type="password" id="confirm" placeholder="Nhập lại mật khẩu"><div id="errConfirm" class="error"></div>
+    <button class="btn btn-cyan text-dark fw-bold w-100 mt-3" onclick="register()">Đăng ký</button>
+    <div class="text-center mt-3"><a class="text-cyan text-decoration-none" href="login.html">Đã có tài khoản? Đăng nhập</a></div>
+  </div>
+</div>
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/js/storage.js"></script>
+<script src="../assets/js/auth.js"></script>
+</body>
+</html>
