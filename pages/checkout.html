@@ -1,1 +1,54 @@
-
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán | BINTAMIN PC</title>
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="../index.html"><span class="text-cyan">BINTAMIN PC</span></a>
+            <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">TRANG CHỦ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">SẢN PHẨM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">PC THEO NHU CẦU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">TIN TỨC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">GIỚI THIỆU</a></li>
+                </ul>
+                <div class="d-flex gap-3 align-items-center nav-icons"><small id="welcome" class="text-muted"></small><a href="products.html" class="text-white">🔍</a><a href="cart.html" class="text-white">🛒 <span id="cartCount" class="badge bg-cyan text-dark rounded-pill">0</span></a><a href="login.html" class="text-white" data-account-link>👤</a></div>
+            </div>
+        </div>
+    </nav>
+    <header class="page-hero">
+        <div class="container">
+            <div class="breadcrumb-lite mb-2"><a href="../index.html">Trang chủ</a> / Thanh toán</div>
+            <h1 class="page-title text-white">Thanh toán</h1>
+            <p class="text-muted mb-0">Mô phỏng quy trình thanh toán đơn hàng PC.</p>
+        </div>
+    </header>
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-7"><div class="content-card form-dark"><h4 class="text-white fw-bold mb-3">Thông tin nhận hàng</h4><input id="customerName" class="form-control mb-3" placeholder="Họ tên"><input id="customerPhone" class="form-control mb-3" placeholder="Số điện thoại"><input id="customerAddress" class="form-control mb-3" placeholder="Địa chỉ nhận hàng"><textarea class="form-control mb-3" rows="4" placeholder="Ghi chú đơn hàng"></textarea><button class="btn btn-cyan text-dark fw-bold" onclick="placeOrder()">Xác nhận đặt hàng</button></div></div>
+                <div class="col-lg-5"><div class="checkout-box"><h4 class="text-white fw-bold">Đơn hàng</h4><div id="checkoutItems" class="my-3"></div><div class="d-flex justify-content-between pt-3 border-top border-secondary"><span class="text-white fw-bold">Tổng cộng</span><strong id="checkoutTotal" class="text-cyan fs-5">0đ</strong></div></div></div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-4 bg-black border-top border-dark text-center text-muted small">
+        <div class="container">&copy; 2026 BINTAMIN PC - Website giới thiệu, bán máy PC trực tuyến.</div>
+    </footer>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/ui.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
